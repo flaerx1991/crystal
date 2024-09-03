@@ -1,0 +1,63 @@
+<section class="exported-cereals {{ module.custom_class }}" id="exported-cereals">
+    <div class="container">
+        <div class="section-heading">
+             <h3>{{module.title }}</h3>
+        </div>
+        <div class="exported-cereals-content ">
+           <div class="tabs-images-col">
+                {% for item in module.tabs_cereals %}
+                    <div class="img-wrap">
+                        <img src="{{item.item_image.url}}" alt="{{item.item_image.alt}}">
+                    </div>
+                 {% endfor %}
+                 <div class="img-wrap img-center">
+                    <img class="logo-image" src="{{options.logo_image.url}}" alt="">
+                    <img src="{{module.tabs_center_image.url}}" alt="{{module.tabs_center_image.alt}}">
+                 </div>
+           </div>
+           <div class="tabs-content">
+                <ul class="tabs-content-items">
+                    {% for item_tab in module.tabs_cereals %}
+                        <li class="tabs-item"> 
+                            <p class="tabs-title">{{ item_tab.item_name }}</p> 
+                            <div class="tabs-inner">
+                                {{item_tab.item_info }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+           </div>
+        </div>
+
+        <div class="exported-cereal-content-mobile-slider">
+            <div class="swiper product-slider">
+                <div class="swiper-wrapper">
+                    {% for item in module.tabs_cereals %}
+                    <div class="swiper-slide slide">
+                        <div class="slide-img">
+                            
+                            <img src="{{item.item_image.url}}" alt="{{item.item_image.alt}}">
+                            
+                        </div>
+                        <div class="slide-info">
+                            <p class="tabs-title">{{ item.item_name }}</p> 
+                            <div class="tabs-inner">
+                                {{item.item_info }}
+                            </div>
+                        </li>
+                        </div>
+                    </div>
+                    {% endfor %}  
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="buttons-wrap">
+                    <div class="swiper-button-prev"><img src="{{ theme.link ~ "/assets/images/arrow.svg"}}" alt="{{ module.arrow_icon.alt }}"></div>
+                    <div class="swiper-button-next"><img src="{{ theme.link ~ "/assets/images/arrow.svg"}}" alt="{{ module.arrow_icon.alt }}"></div>
+
+                </div>
+            </div>    
+        
+        </div>
+    </div>
+</section>

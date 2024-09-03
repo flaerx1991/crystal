@@ -1,0 +1,37 @@
+.logistics {
+    background: $white;
+    .container {
+        width: 100%;
+        max-width: 1270px;
+        margin: 0 auto;
+        position: relative;
+        padding: 50px 16px 50px 16px;
+        @media (min-width: $mediaTabletMax) {
+            // padding: 55px 40px 293px 40px;
+        }
+        @media (min-width: $mediaDesktopMid) {
+            padding: 55px 0 293px 0;
+        }
+        .section-heading {
+            margin-bottom:50px ;
+        }
+
+        .logistics-content {
+            img {
+                position: relative;
+               
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                @media (min-width: $mediaTabletMin) {
+                    
+                }
+                @media (min-width: $mediaTabletMax) {
+                    // top: -36px;
+                    margin-top: 80px;
+                }
+            }
+        }
+
+    }
+}

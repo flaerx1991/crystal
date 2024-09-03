@@ -1,0 +1,411 @@
+.contact-us {
+    top: 1px;
+    background-color: $blue2;
+    position: relative;
+    .container {
+        width: 100%;
+        max-width: 1126px;
+        margin: 0 auto;
+        padding: 80px 16px 0;
+        position: relative;
+        z-index: 3;
+
+        @media (min-width: $mediaTabletMax) {
+            padding: 58px 40px 0px;
+
+        }
+
+        @media (min-width: $mediaDesktopMid) {
+            padding: 58px 0px 0px;
+        }
+
+        @media (min-width: $mediaDesktopFHD) {
+            max-width: 1237px;
+        }
+
+        .section-heading {
+            margin-bottom: 50px;
+            @media (min-width: $mediaTabletMax) {
+                margin-bottom: 76px;
+            }
+            h3 {
+                color: $white;
+                font-weight: 400;
+            }
+        }
+
+        .contacts-content {
+            // margin-top: 10px;
+            flex-direction: column;
+            
+            // row-gap: 10px;
+            @media (min-width: $mediaTabletMin) {
+                margin-top: 36px;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            @media (min-width: $mediaDesktopMid) {
+              
+                justify-content: space-between;
+                // flex-wrap: wrap;
+            }
+
+            .contact-item {
+                margin-bottom: 20px;
+
+                // align-items: flex-start;
+                // flex-direction: column;
+                // padding-left: 10px;
+                @media (min-width: $mediaTabletMin) {
+                    flex-direction: row;
+                    align-items: center;
+                    padding-left: unset;
+                }
+
+                @media (min-width: $mediaDesktopMid) {
+              
+                  margin-bottom: 0;
+                   
+                }
+    
+                .icon {
+                    margin-right: 10px;
+                }
+
+                .name-link {
+                    color: $white;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    letter-spacing: 1.92px;
+                    text-transform: uppercase;
+
+                    @media (min-width: $mediaTabletMin) {
+                        padding-left: 10px;
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+
+        .form-content {
+           margin-top: 50px;
+            @media (min-width: $mediaTabletMax) {
+                margin-top: 71px;
+    
+            }
+
+            .section-heading{
+                margin-bottom: 25px;
+                @media (min-width: $mediaTabletMin) {
+                    margin-bottom: 50px;
+                }
+            }
+            .form-col {
+                // margin-top: 18px;
+                margin: 0 auto;
+                margin-top: 30px;
+                width: 100%;
+                max-width: 993px;
+
+                form {
+                    position: relative;
+                    // padding: 0 10px;
+
+                    @media (min-width: $mediaTabletMin) {
+                        padding: unset;
+                    }
+
+                    .fields-wrap {
+
+
+                        @media (min-width: $mediaTabletMin) {
+                            grid-template-columns: 1fr 1fr;
+                            column-gap: 13px;
+                        }
+
+                        input {
+                            width: 100%;
+                        }
+
+                        .field-wrap {
+
+                            
+                            span.wpcf7-list-item {
+                                display: inline-block;
+                                margin: 0;
+                            }
+
+                            .wpcf7 .wpcf7-list-item {
+                                display: block;
+                                margin-bottom: 10px;
+                            }
+
+                            .wpcf7-checkbox label {
+                                position: relative;
+                                cursor: pointer;
+                            }
+
+                            .wpcf7-checkbox input[type=checkbox] {
+                                /*position: relative;*/
+                                position: absolute;
+                                visibility: hidden;
+                                width: 20px;
+                                height: 20px;
+                                top: 0;
+                                left: 0;
+                                transform: rotate(45deg);
+                            }
+
+                            .wpcf7-checkbox input[type=checkbox]+span {
+                                /* border: 3px solid red; */
+                            }
+
+                            .wpcf7-checkbox input[type=checkbox]+span:before {
+                                display: block;
+                                position: absolute;
+                                content: '';
+                                // border-radius: 5px;
+                                height: 17px;
+                                width: 17px;
+                                top: 0px;
+                                left: 0px;
+                                border: 1px solid $white;
+                                transform: rotate(45deg) translate(-100%, -100%);
+
+                                top: 50%;
+                                @media (min-width: $mediaTabletMin) {
+                                    top: 0px;
+                                    transform: rotate(45deg);
+                                }
+                            }
+
+                            .wpcf7-checkbox input[type=checkbox]+span:after {
+                                display: block;
+                                position: absolute;
+                                content: "\2713";
+                                height: 17px;
+                                width: 17px;
+                                top: -25px;
+                                left: 2px;
+                                visibility: hidden;
+                                text-align: center;
+                                line-height: 30px;
+                                color: $white;
+                                font-size: 28px;
+                                @media (min-width: $mediaTabletMin) {
+                                    top: -9px;
+                                }
+                            }
+
+                            .wpcf7-checkbox input[type=checkbox]:checked+span:before {
+                                background: transparent;
+                            }
+
+                            .wpcf7-checkbox input[type=checkbox]:checked+span:after {
+                                visibility: visible;
+                            }
+
+                            .wpcf7-list-item-label {
+                                margin-left: 40px;
+                                display: inline-block;
+                                color: $white;
+                                font-size: 18px;
+                                letter-spacing: 1.8px;
+                            }
+
+                            &:not(:last-child) {
+                                margin-bottom: 10px;
+                            }
+                            &:nth-child(1){
+                                input{
+                                    clip-path: polygon(9% 0%, 100% 0, 100% 50%, 91% 100%, 0 100%, 0% 50%);
+                                    @media (min-width: $mediaTabletMin) {
+                                        clip-path: polygon(12.5% 0%, 100% 0, 100% 50%, 87.5% 100%, 0 100%, 0% 50%);
+                                    }
+                                    @media (min-width: $mediaTabletMax) {
+                                        // clip-path: polygon(13% 0%, 100% 0, 100% 50%, 91% 100%, 0 100%, 0% 61%);
+                                        clip-path: polygon(9% 0%, 100% 0, 100% 50%, 91% 100%, 0 100%, 0% 50%);
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                input{
+                                    clip-path: polygon(9% 0%, 100% 0, 100% 50%, 91% 100%, 0 100%, 0% 50%);
+                                    @media (min-width: $mediaTabletMin) {
+                                        clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 100% 100%, 12.5% 100%, 0% 50%);
+                                    }
+                                    @media (min-width: $mediaTabletMax) {
+                                        clip-path: polygon(0% 0%, 91% 0%, 100% 50%, 100% 100%, 9% 100%, 0% 50%);
+                                    }
+                                }
+                            }
+                            input {
+                                padding: 15px 30px;
+                                // border: 1px solid $gold2;
+                                font-weight: 600;
+                                font-size: 18px;
+                                color: $gray2;
+                                -webkit-appearance: none;
+                                letter-spacing: 1.92px;
+                                font-family: inherit;
+                                background: $white;
+                                border-radius: 0px;
+
+                                @media (min-width: $mediaTabletMin) {
+                                    font-size: 24px;
+                                    padding: 27px 53px;
+                                }
+
+                                &::placeholder {
+                                    font-weight: 600;
+                                    color: $gray2;
+                                    text-transform: uppercase;
+                                }
+
+                                &:focus {
+                                    outline: 0px solid $blue;
+                                    // border: none;
+                                    border: 0px solid $blue;
+                                }
+
+                            }
+                        }
+
+                        .checkbox-field {
+                            grid-column: 1/-1;
+                            margin-top: 0px;
+                            @media (min-width: $mediaTabletMin) {
+                                margin-top: 20px;
+
+                            }
+                            p{
+                                @media (min-width: $mediaTabletMin) {
+                                    padding-left: 53px;
+
+                                }
+                            }
+                        }
+
+                        .text-area-wrap {
+                            grid-column: 1/-1;
+
+                            p {
+                                position: relative;
+                                overflow: unset;
+                                textarea {
+                                    width: 100%;
+                                    resize: none;
+                                    -webkit-appearance: none;
+                                    padding: 15px 30px;
+                                    border: 1px solid $white;
+                                    font-weight: 600;
+                                    font-size: 18px;
+                                    color: $gray2;
+                                    // border-radius: 10px;
+                                    letter-spacing: 1.92px;
+                                    font-family: inherit;
+                                    height: 188px;
+                                    overflow: auto;
+                                    background: $white;
+                                    position: relative;
+                                    border-radius: 0px;
+
+                                    clip-path: polygon(9% 0%, 100% 0, 100% 83%, 91% 100%, 0 100%, 0% 17%);
+                                    @media (min-width: $mediaTabletMin) {
+                                        clip-path: unset;
+
+                                    }
+                                    @media (min-width: $mediaTabletMax) {
+                                        padding: 48px 53px;
+                                        font-size: 24px;
+
+                                    }
+
+                                    &::placeholder {
+                                        font-weight: 600;
+                                        color: $gray2;
+                                        text-transform: uppercase;
+                                    }
+
+                                    &:focus {
+                                        outline: 0px solid $white;
+                                        // border: none;
+                                        border: 0px solid $white;
+                                    }
+
+                                    
+
+                                }
+
+                                &::before{
+                                    content: '';
+                                    background: $blue2;
+                                    position: absolute;
+                                    top: -26%;
+                                    left: 50%;
+                                    transform: translate(-50%, 0%);
+                                    display: none;
+                                    width: 102px;
+                                    height: 102px;
+                                    z-index: 1;
+                                   
+                                    @media (min-width: $mediaTabletMin) {
+                                        display: block;
+                                        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .wpcf7-submit {
+                        font-size: 18px;
+                        font-weight: 600;
+
+                        // border-radius: 10px;
+                        transition: .3s all;
+                        cursor: pointer;
+                        width: 100%;
+                        max-width: 280px;
+                        font-family: inherit;
+                        height: 56px;
+                        margin: 0 auto;
+                        margin-top: 15px;
+                        border-radius: 0px;
+                        -webkit-appearance: none;
+                        background: $white;
+                        color: $blue;
+                        text-transform: uppercase;
+                        display: block;
+                        clip-path: polygon(9% 0%, 100% 0, 100% 50%, 91% 100%, 0 100%, 0% 50%);
+                        
+                        @media (min-width: $mediaTabletMin) {
+                            max-width: 490px;
+                            height: 88px;
+                            margin-top: 45px;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .background-contacts {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        img {
+            width: 100%;
+        }
+    }
+}

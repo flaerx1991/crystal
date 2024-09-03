@@ -1,0 +1,27 @@
+<section class="contact-us {{ module.custom_class }}" id="contact-us">
+    <div class="container">
+       
+        <div class="section-heading">
+            <h3>{{module.title }}</h3>
+        </div>
+        <div class="contacts-content flex">
+            {% for con_item in module.contacts %}
+                <div class="contact-item flex">
+                    <div class="icon"><img src="{{con_item.image_contacts.url }}" alt="{{con_item.image_contacts.alt }}"></div>
+                    <a href="{{ con_item.link.url }}" class="name-link">{{ con_item.link.title }}</a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="form-content">
+            <div class="section-heading">
+                <h3>{{module.form_title }}</h3>
+            </div>
+            <div class="form-col">
+                {{ function('do_shortcode', '[contact-form-7 id="ad8b4c4" title="Conversaton Request"]') }}
+            </div>
+        </div>
+        
+    </div>
+
+     <div class="background-contacts"> <img src="{{ module.image.url }}" alt="{{ module.image.alt }}"> </div>
+</section>

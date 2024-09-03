@@ -1,0 +1,25 @@
+
+<section class="hero-banner {{ function('is_front_page') ? '' : 'other-page' }}" id="hero" >
+    <div class="banner-wrap">
+        <div class="content-wrap">
+            <div class="hero-main-content">
+                <div class="hero-logo">
+                    <img src="{{ module.hero_logo.url }}" alt="{{ module.hero_logo.alt }}">
+                </div>
+                <div class="hero-heading">
+                    <h1> {{ module.hero_title }}</h1>
+                    <p class="hero-subtitle">{{ module.hero_subtitle }}</p>
+                </div>
+            </div>
+            <p class="hero-description">
+                {{module.hero_description }}
+            </p>
+        </div>
+        <img class="poster" src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+        
+
+        <div class="next-section-button">
+            <img class="" src="{{ module.next_section_button.url }}" alt="">
+        </div>
+    </div>
+</section>

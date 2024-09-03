@@ -1,0 +1,26 @@
+<section class="about-company {{ module.custom_class }}" id="about-company">
+    <div class="container">
+        <div class="section-heading">
+            <h3>{{ module.title }}</h3>
+        </div>
+        <div class="about-company-content grid">
+            <div class="img-col">
+                {% for item in module.about_company_diamond %}
+                  <img src="{{item.image.url}}" alt="{{item.image.alt}}">
+                {% endfor %}
+            </div>
+            <div class="info-col">
+                <h3>{{module.title }}</h3>
+                <div class="info-col-content">
+                    {{ module.description }}
+                </div>
+            </div>
+            
+             {# <div class="img-col">
+                <img src="{{ module.image_col.url }}" alt="{{ module.image_col.url }}">
+            </div> #}
+           
+        </div>
+    </div>
+    <div class="background-about-company"> <img src="{{ module.image.url }}" alt="{{ module.image.alt }}"> </div>
+</section>
